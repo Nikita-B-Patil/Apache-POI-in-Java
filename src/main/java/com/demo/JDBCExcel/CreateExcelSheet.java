@@ -19,7 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class CreateExcelSheet {
 	private static String[] columns = {"Roll No"};
 	public static void main(String[] args) throws IOException {
-		//xssf workbook
+				//<----------------------XSSF WORKBOOK-------------------------->
 				Workbook workbook1 = new XSSFWorkbook();
 				Sheet sheet1 = workbook1.createSheet("Random1");
 						
@@ -51,8 +51,7 @@ public class CreateExcelSheet {
 			
 				
 				try {
-				//FileOutputStream fileout1 = new FileOutputStream("XSSF-File.xlsx");
-					FileOutputStream fileout1 = new FileOutputStream("XSSF-File.xls");
+				FileOutputStream fileout1 = new FileOutputStream("XSSF-File.xls");
 				workbook1.write(fileout1);
 				fileout1.close();
 				}
@@ -71,7 +70,7 @@ public class CreateExcelSheet {
 				
 				System.out.println("<------------------creating another workbook----------------------->");
 				
-				//hssf workbook
+				//<--------------------------------HSSF WORKBOOK--------------------------------------->
 				Workbook workbook2 = new HSSFWorkbook();
 				Sheet sheet2 = workbook2.createSheet("Random2");
 				
